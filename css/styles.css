@@ -1,0 +1,84 @@
+.hover-card .back {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.hover-card:hover .back {
+    opacity: 1;
+}
+.hover-card:hover .front {
+    opacity: 0;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside top";
+        "aside bottom";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    grid-area: top;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas:
+        "top"
+        "bottom";
+}
+
+.top-section {
+    grid-area: top;
+    background-color: #242529;
+    padding: 1rem;
+}
+
+.bottom-section {
+    grid-area: bottom;
+    background-color: #242529;
+    padding: 1rem;
+}
+
+.bg-card {
+    background-color: #133388;
+}
+
+.btn-green {
+    background-color: #01af20;
+}
+.btn-gray {
+    background-color: #465671;
+}
+
+.text-light-blue {
+    color: #6fd8d8;
+}
+
+.smooth-border {
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
