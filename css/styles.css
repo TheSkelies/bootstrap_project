@@ -15,16 +15,6 @@ html, body {
     margin: 0;
 }
 
-.grid-layout {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100px 1fr;
-    grid-template-areas:
-        "header header"
-        "aside top";
-        "aside bottom";
-    height: 100vh;
-}
 
 header {
     grid-area: header;
@@ -34,16 +24,19 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    height: 15vh;
 }
 
-aside {
+
+
+.aside {
     grid-area: aside;
     background-color: #343a40;
     color: white;
     padding: 1rem;
 }
 
-main {
+.main {
     grid-area: top;
     display: grid;
     grid-template-rows: 20vh 80vh;

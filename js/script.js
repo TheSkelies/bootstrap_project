@@ -14,6 +14,6 @@ function highlightElement(elementId) {
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
     setTimeout(() => {
-        element.classList.remove('border', 'border-5', 'border-danger');
+        element.classList.remove('smooth-border', 'border', 'border-5', 'border-danger');
     }, 1000);
 }

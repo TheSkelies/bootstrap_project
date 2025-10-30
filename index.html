@@ -10,7 +10,7 @@
 <body class="bg-dark">
 
 
-<div class="grid-layout">
+<div>
     <header>
         <div class="d-flex align-items-center">
             <div class="text-white fw-bold">Artishock</div>
@@ -19,236 +19,242 @@
     </header>
 
 
-    <aside>
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="mb-2">
-                <img src="assets/play.png" alt="" style="height: 50px;">
+
+            <div class="col-md-1 aside">
+                <div class="row">
+                    <div class="mb-2">
+                        <img src="assets/play.png" alt="" style="height: 50px;">
+                    </div>
+                    <div>
+                        <img src="assets/person.png" alt="" style="height: 50px;">
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="assets/person.png" alt="" style="height: 50px;">
+
+
+            <div class="col-md-11 main">
+                <section class="top-section">
+                    <div class="container mt-3">
+                        <div class="row g-2 justify-content-center">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Private_matches')">Private matches</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Death_matches')">Death matches</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Duels')">Duels</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('2X2')">2X2</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('5X5')">5X5</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('BHOP')">BHOP</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('SURF')">SURF</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Death_run')">Death run</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Football')">Football</button>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('AWP_ONLY')">AWP ONLY</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+
+                <section class="bottom-section gap-3 p-3 d-flex flex-wrap justify-content-center">
+                    <div id="Private_matches" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/matches_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">Private matches</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">Private matches</h5>
+                            <p class="card-text mx-2">Ваши личные сервера для классической игры с вашими друзьями</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="Death_matches" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/DM_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">Death matches</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">Death matches</h5>
+                            <p class="card-text mx-2">Классический бой насмерть</p>
+                            <p class="card-text mx-2">Сражайтесь 10 минут, игрок, набравший наибольшее количество очков - победитель</p>
+                            <p class="card-text mx-2">Отлично подходит для разминки</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="Duels" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/duels_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">Duels</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">Duels</h5>
+                            <p class="card-text mx-2">Бои 1 на 1 со случайным оружием на случайных позициях</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="2X2" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/2v2_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">2X2</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">2X2</h5>
+                            <p class="card-text mx-2">Классический режим Напарники</p>
+                            <p class="card-text mx-2">Сражайтесь со своим другом плечом к плечу на уменьшенной версии карты</p>
+                            <p class="card-text mx-2">Игра идёт до 9 побед одной из команды</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="5X5" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/5v5_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">5X5</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">5X5</h5>
+                            <p class="card-text mx-2">Классический Соревновательный режим</p>
+                            <p class="card-text mx-2">Сражайтесь командой из пятерых человек на полной версии карты</p>
+                            <p class="card-text mx-2">Игра идёт до 13 побед одной из команд</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="BHOP" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/BHOP_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">BHOP</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">BHOP</h5>
+                            <p class="card-text mx-2">Режим для тренировки и разминки движения и прыжков</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="SURF" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/SURF_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">SURF</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">SURF</h5>
+                            <p class="card-text mx-2">Тематические карты для тренировки и разминки скольжения по поверхностям</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="Death_run" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/deathrun_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">Death run</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">Death run</h5>
+                            <p class="card-text mx-2">Развлекательный режим с двумя командами</p>
+                            <p class="card-text mx-2">Первой необходимо пройти паркур карту</p>
+                            <p class="card-text mx-2">Второй необходимо не допустить этого, активируя ловушки</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="Football" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/football_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">Football</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">Football</h5>
+                            <p class="card-text mx-2">Развлекательный режим футбола с его классическими правилами</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="AWP_ONLY" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
+                        <div class="front position-relative h-100">
+                            <img src="assets/AWP_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
+                            <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
+                                <h5 class="card-title">AWP ONLY</h5>
+                            </div>
+                        </div>
+                        <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+                            <h5 class="card-title">AWP ONLY</h5>
+                            <p class="card-text mx-2">Развлекательный режим, где на вооружение выдаётся только AWP</p>
+                            <p class="card-text mx-2">(Концерт Кишлака тут)</p>
+                            <p class="card-text mx-2">(или нет)</p>
+                            <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
+                                Скопировать айпи-адрес
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
             </div>
         </div>
+    </div>
 
 
-    </aside>
-
-
-    <main>
-        <section class="top-section">
-            <div class="container mt-3">
-                <div class="row g-2 justify-content-center">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Private_matches')">Private matches</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Death_matches')">Death matches</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Duels')">Duels</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('2X2')">2X2</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('5X5')">5X5</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('BHOP')">BHOP</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('SURF')">SURF</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Death_run')">Death run</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('Football')">Football</button>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <button class="btn btn-gray w-100 py-1 text-light-blue" onclick="highlightElement('AWP_ONLY')">AWP ONLY</button>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </section>
-
-
-
-        <section class="bottom-section gap-3 p-3 d-flex flex-wrap">
-            <div id="Private_matches" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/matches_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">Private matches</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">Private matches</h5>
-                    <p class="card-text mx-2">Ваши личные сервера для классической игры с вашими друзьями</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="Death_matches" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/DM_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">Death matches</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">Death matches</h5>
-                    <p class="card-text mx-2">Классический бой насмерть</p>
-                    <p class="card-text mx-2">Сражайтесь 10 минут, игрок, набравший наибольшее количество очков - победитель</p>
-                    <p class="card-text mx-2">Отлично подходит для разминки</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="Duels" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/duels_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">Duels</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">Duels</h5>
-                    <p class="card-text mx-2">Бои 1 на 1 со случайным оружием на случайных позициях</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="2X2" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/2v2_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">2X2</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">2X2</h5>
-                    <p class="card-text mx-2">Классический режим Напарники</p>
-                    <p class="card-text mx-2">Сражайтесь со своим другом плечом к плечу на уменьшенной версии карты</p>
-                    <p class="card-text mx-2">Игра идёт до 9 побед одной из команды</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="5X5" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/5v5_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">5X5</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">5X5</h5>
-                    <p class="card-text mx-2">Классический Соревновательный режим</p>
-                    <p class="card-text mx-2">Сражайтесь командой из пятерых человек на полной версии карты</p>
-                    <p class="card-text mx-2">Игра идёт до 13 побед одной из команд</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="BHOP" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/BHOP_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">BHOP</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">BHOP</h5>
-                    <p class="card-text mx-2">Режим для тренировки и разминки движения и прыжков</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="SURF" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/SURF_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">SURF</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">SURF</h5>
-                    <p class="card-text mx-2">Тематические карты для тренировки и разминки скольжения по поверхностям</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="Death_run" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/deathrun_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">Death run</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">Death run</h5>
-                    <p class="card-text mx-2">Развлекательный режим с двумя командами</p>
-                    <p class="card-text mx-2">Первой необходимо пройти паркур карту</p>
-                    <p class="card-text mx-2">Второй необходимо не допустить этого, активируя ловушки</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="Football" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/football_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">Football</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">Football</h5>
-                    <p class="card-text mx-2">Развлекательный режим футбола с его классическими правилами</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-            <div id="AWP_ONLY" class="card position-relative overflow-hidden text-center shadow-sm hover-card" style="width: 15rem; height: 40vh;">
-                <div class="front position-relative h-100">
-                    <img src="assets/AWP_pic.png" class="card-img h-100" alt="Private matches" style="object-fit: cover;">
-                    <div class="card-img-overlay d-flex align-items-end justify-content-center p-3 text-white">
-                        <h5 class="card-title">AWP ONLY</h5>
-                    </div>
-                </div>
-                <div class="back bg-card text-white position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
-                    <h5 class="card-title">AWP ONLY</h5>
-                    <p class="card-text mx-2">Развлекательный режим, где на вооружение выдаётся только AWP</p>
-                    <p class="card-text mx-2">(Концерт Кишлака тут)</p>
-                    <p class="card-text mx-2">(или нет)</p>
-                    <button class="btn btn-green text-white mt-auto mb-3 mx-2" onclick="copyToClipboard('connect 422.234.123.89')">
-                        Скопировать айпи-адрес
-                    </button>
-                </div>
-            </div>
-
-        </section>
-    </main>
 </div>
 
 
